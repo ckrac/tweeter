@@ -21,13 +21,25 @@
   padding-bottom: 10px;
 }
 
-.new-tweet span {
+.new-tweet .counter {
   font-size: 0.75em;
   font-weight: 500;
   font-style: italic;
   float: right;
   margin-top: 4px;
   padding-right: 8px;
-
+  color: black;
 }
+
+.new-tweet .valid {
+  font-size: 0.75em;
+  font-weight: 500;
+  font-style: italic;
+  float: right;
+  margin-top: 4px;
+  padding-right: 8px;
+  color: red;
+}
+
+
 

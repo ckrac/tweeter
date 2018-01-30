@@ -1,12 +1,18 @@
 $( document ).ready(function() {
     // console.log( "ready!" );
     $('.new-tweet').on('keyup', 'textarea', function(e) {
-      // console.log('event: ', e);
       console.log('length: ', this);
-      // console.log($(this));
       let tweetLength = this.value.length;
-      console.log(tweetLength);
-      $(this).siblings('.counter').text(tweetLength);
+      const maxLength = 140;
+      let tweetCounter = maxLength - tweetLength;
+      if (tweetLength > maxLength) {
+        $(this).siblings('.counter').addClass('valid');
+        $(this).siblings('.counter').text(tweetCounter);
+      } else {
+        $(this).siblings('.counter').removeClass('valid');
+        $(this).siblings('.counter').text(tweetCounter);
+      }
+      // $(this).siblings('.counter').text(tweetCounter);
     });
 
 });

@@ -41,5 +41,72 @@
   color: red;
 }
 
+/* ----------------- user tweets -----------------*/
 
+#tweets {
+  margin-top: 10px;
+  background-color: white;
+  margin-right: 2em;
+/*  height: 195px;*/
+
+}
+
+/* ------------- tweet ---------------*/
+
+#tweets .tweet {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid silver;
+  border-radius: 5px;
+  /*margin-right: 2em;*/
+  height: 195px;
+
+}
+
+#tweets .tweet header {
+  height: 70px;
+  background-color: #eee;
+  clear: both;
+}
+
+#tweets .tweet header h2 {
+  display: inline;
+  float: left;
+  margin-top: 8px;
+}
+
+#tweets .tweet header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  float: left;
+  margin: 8px 10px;
+  clear: both;
+}
+
+#tweets .tweet header span {
+  float: right;
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+#tweets .tweet article {
+  border-bottom: 1px solid #eee;
+}
+
+#tweets .tweet article p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+}
+
+#tweets .tweet footer {
+  height: 20px;
+}
+
+#tweets .tweet footer p {
+  font-size: .75em;
+  margin-top: 15px;
+  margin-left: 5px;
+}
 

@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .new-tweet {
   background-color: #eee;
   border: 1px solid silver;
@@ -53,17 +57,28 @@
 
 /* ------------- tweet ---------------*/
 
-#tweets .tweet {
+.tweet {
   margin-top: 10px;
   background-color: white;
   border: 1px solid silver;
   border-radius: 5px;
-  /*margin-right: 2em;*/
   height: 195px;
+  opacity: 0.75;
 
+  transition: border-color .5s linear;
 }
 
-#tweets .tweet header {
+#tweets .hover {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 195px;
+  opacity: 1;
+}
+
+
+.tweet__header {
   height: 70px;
   background-color: #eee;
   clear: both;
@@ -109,4 +124,31 @@
   margin-top: 15px;
   margin-left: 5px;
 }
+
+.tweet__footer {
+  position: relative;
+}
+
+.tweet__icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  transition:  opacity .5s linear;
+}
+/*.tweet:hover .tweet__icons,
+.tweet__icons--hover {
+  opacity: 1;
+}*/
+.tweet--hover  {
+  border-color: black;
+  border-width: 2px;
+}
+.tweet--hover .tweet__icons {
+  opacity: 1;
+}
+
+
+
+
 

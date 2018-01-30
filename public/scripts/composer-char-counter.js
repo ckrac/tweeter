@@ -15,4 +15,18 @@ $( document ).ready(function() {
       // $(this).siblings('.counter').text(tweetCounter);
     });
 
+    $('#tweets').on('mouseenter', '.tweet', function(e) {
+      $(this).addClass('tweet--hover')
+      //$(this).find('.tweet__icons').addClass('tweet__icons--hover');
+    })
+    $('#tweets').on('mouseleave', '.tweet', function(e) {
+      $(this).removeClass('tweet--hover')
+      //$(this).find('.tweet__icons').removeClass('tweet__icons--hover')
+    })
+    /*
+      $(this).on('mouseleave', function(e) {
+        $(this).removeClass('hover');
+      });
+    });*/
+
 });

@@ -193,6 +193,11 @@ $( document ).ready(function() {
       }
   });
 
+  //slide new-tweet section up or down
+  $('#nav-bar button').on('click', function(e) {
+    console.log('clicked');
+    $('.new-tweet').slideToggle();
+  });
 
 
 

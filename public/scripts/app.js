@@ -83,6 +83,14 @@ $( document ).ready(function() {
   // $('#tweets').append($tweet);
   // $('#tweets').append($tweet);
 
+  //
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+
   /* --------------  --------------- */
 
   function createTweetElement (tweetObj) {
@@ -96,7 +104,7 @@ $( document ).ready(function() {
                       </header>
 
                       <article>
-                        <p>${tweetObj.content.text}</p>
+                        <p>${escape(tweetObj.content.text)}</p>
                       </article>
 
                       <footer class="tweet__footer">

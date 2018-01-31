@@ -6,6 +6,7 @@
 
 $( document ).ready(function() {
 
+
   const ROOT_URL = "http://localhost:8080/"
 
   /* -------------- used to test createTweet Element function --------------- */
@@ -120,7 +121,7 @@ $( document ).ready(function() {
       // calls createTweetElement for each tweet
       let $tweetValue =createTweetElement(tweet_);
       // takes return value and appends it to the tweets container
-      $('#tweets').append($tweetValue);
+      $('#tweets').prepend($tweetValue);
     }
   }
 
@@ -139,6 +140,7 @@ $( document ).ready(function() {
         renderTweets(moreTweets);
       }
     });
+
   }
 
   loadTweets();
@@ -148,7 +150,6 @@ $( document ).ready(function() {
   // generate a new tweet from a form submission
   $('.new-tweet form').on('submit', function(e) {
     $.ajax({
-      // why is this to /tweets?
       url: '/tweets',
       method: 'POST',
       data: $(this).serialize(),
@@ -159,7 +160,26 @@ $( document ).ready(function() {
         loadTweets();
       }
     });
+
+
     e.preventDefault();
+  });
+
+  // check if tweet is valid, else show error
+  $('.new-tweet input').on('click', function(e) {
+      let textLength = $(this).siblings('textarea').val().length;
+      // console.log(textLength);
+      let $errorMessage1 = $(`<span> Tweet is longer than 140 characters</span>`);
+      let $errorMessage2 = $(`<span> Please submit a tweet</span>`);
+      if (textLength > 140) {
+        $('.counter').text('Error:');
+        $('.counter').append($errorMessage1);
+        e.preventDefault();
+      } else if (textLength === 0) {
+        $('.counter').text('Error:');
+        $('.counter').append($errorMessage2);
+        e.preventDefault();
+      }
   });
 
 });

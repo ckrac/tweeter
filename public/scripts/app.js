@@ -128,6 +128,15 @@ $( document ).ready(function() {
 
   $('.new-tweet').on('click', 'form', function(e) {
     e.preventDefault();
+    //
+    $.ajax({
+      url: 'http://localhost:8080/',
+      method: 'GET',
+      data: $(this).serialize(),
+      success: function () {
+        console.log(data);
+      }
+    });
   });
 
 });

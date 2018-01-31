@@ -126,5 +126,9 @@ $( document ).ready(function() {
 
   renderTweets(data);
 
+  $('.new-tweet').on('click', 'form', function(e) {
+    e.preventDefault();
+  });
+
 });
 

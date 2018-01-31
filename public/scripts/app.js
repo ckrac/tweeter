@@ -115,10 +115,10 @@ $( document ).ready(function() {
   function renderTweets(tweets) {
   // loops through tweets
     for (let tweet_ of tweets) {
-    // calls createTweetElement for each tweet
-    let $tweetValue =createTweetElement(tweet_);
-    // takes return value and appends it to the tweets container
-    $('#tweets').append($tweetValue);
+      // calls createTweetElement for each tweet
+      let $tweetValue =createTweetElement(tweet_);
+      // takes return value and appends it to the tweets container
+      $('#tweets').append($tweetValue);
     }
   }
 

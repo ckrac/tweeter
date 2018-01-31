@@ -6,6 +6,8 @@
 
 $( document ).ready(function() {
 
+  const ROOT_URL = "http://localhost:8080/"
+
   /* -------------- used to test createTweet Element function --------------- */
 
   // const tweetData = {
@@ -122,21 +124,43 @@ $( document ).ready(function() {
     }
   }
 
+  /* --------------  --------------- */
+
+  // load all tweets via AJAX 'GET' request, then render them on page
+  const loadTweets = () => {
+    // make the AJAX call to load all the tweets from the API
+    $.ajax({
+      // use content from url to make tweets content for homepage
+      url: 'http://localhost:8080/tweets',
+      method: 'GET',
+      success: function (moreTweets) {
+        console.log('Success: ', moreTweets);
+        //passed data from url to func to render homepage
+        renderTweets(moreTweets);
+      }
+    });
+  }
+
+  loadTweets();
+
   /* -------------- call Function to render index page --------------- */
 
   renderTweets(data);
 
-  $('.new-tweet').on('click', 'form', function(e) {
-    e.preventDefault();
-    //
+  // generate a new tweet from a form submission
+  $('.new-tweet form').on('submit', function(e) {
     $.ajax({
-      url: 'http://localhost:8080/',
-      method: 'GET',
+      // why is this to /tweets?
+      url: '/tweets',
+      method: 'POST',
       data: $(this).serialize(),
       success: function () {
+        // console.log('success');
         console.log(data);
+        // location.reload();
       }
     });
+    e.preventDefault();
   });
 
 });

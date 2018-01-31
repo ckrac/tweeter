@@ -62,7 +62,7 @@
   background-color: white;
   border: 1px solid silver;
   border-radius: 5px;
-  height: 195px;
+  /*min-height: 195px;*/
   opacity: 0.75;
 
   transition: border-color .5s linear;
@@ -136,10 +136,7 @@
   opacity: 0;
   transition:  opacity .5s linear;
 }
-/*.tweet:hover .tweet__icons,
-.tweet__icons--hover {
-  opacity: 1;
-}*/
+
 .tweet--hover  {
   border-color: black;
   border-width: 2px;

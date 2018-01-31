@@ -6,6 +6,8 @@
 
 $( document ).ready(function() {
 
+  /* -------------- used to test createTweet Element function --------------- */
+
   // const tweetData = {
   //   "user": {
   //     "name": "Newton",
@@ -21,6 +23,8 @@ $( document ).ready(function() {
   //   },
   //   "created_at": 1461116232227
   // }
+
+  /* -------------- used for renderTweets function --------------- */
 
   const data = [
   {
@@ -48,7 +52,7 @@ $( document ).ready(function() {
       },
       "handle": "@rd" },
     "content": {
-      "text": "Je pense , donc je suis"
+      "text": "Je pense , donc je suis asdasdasd asdasdasdasdasd aasdasdasdasds"
     },
     "created_at": 1461113959088
   },
@@ -63,16 +67,20 @@ $( document ).ready(function() {
       "handle": "@johann49"
     },
     "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit. asdasdasdadfaasf bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbssssssssaaaaaa asdasdasdasd"
     },
     "created_at": 1461113796368
   }
 ];
 
+  /* --------------  createTweeteElement test --------------- */
+
   // let $tweet = createTweetElement(tweetData);
   // console.log($tweet);
   // $('#tweets').append($tweet);
   // $('#tweets').append($tweet);
+
+  /* --------------  --------------- */
 
   function createTweetElement (tweetObj) {
 
@@ -102,6 +110,8 @@ $( document ).ready(function() {
     return $tweet;
   }
 
+  /* --------------  --------------- */
+
   function renderTweets(tweets) {
   // loops through tweets
     for (let tweet_ of tweets) {
@@ -111,6 +121,8 @@ $( document ).ready(function() {
     $('#tweets').append($tweetValue);
     }
   }
+
+  /* -------------- call Function to render index page --------------- */
 
   renderTweets(data);
 

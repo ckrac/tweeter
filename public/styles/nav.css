@@ -23,3 +23,31 @@
   line-height: 80px;
 }
 
+#nav-bar button {
+  font-size: 1.2em;
+  height: 60px;
+  width: 120px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 180px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: #00a087;
+  opacity: 0.8;
+}
+
+#nav-bar button:hover {
+  font-size: 1.2em;
+  height: 60px;
+  width: 120px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 180px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  opacity: 1;
+}
+

@@ -153,6 +153,8 @@ $( document ).ready(function() {
 
   loadTweets();
 
+
+
   /* -------------- call Function to render index page --------------- */
 
   // generate a new tweet from a form submission
@@ -173,6 +175,7 @@ $( document ).ready(function() {
     e.preventDefault();
   });
 
+
   // check if tweet is valid, else show error
   $('.new-tweet input').on('click', function(e) {
       let textLength = $(this).siblings('textarea').val().length;
@@ -189,6 +192,9 @@ $( document ).ready(function() {
         e.preventDefault();
       }
   });
+
+
+
 
 });
 

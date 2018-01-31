@@ -197,8 +197,8 @@ $( document ).ready(function() {
   $('#nav-bar button').on('click', function(e) {
     console.log('clicked');
     $('.new-tweet').slideToggle();
+    $('.new-tweet textarea').focus();
   });
-
 
 
 });

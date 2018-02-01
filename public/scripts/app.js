@@ -154,6 +154,8 @@ $( document ).ready(function() {
       data: $(this).serialize(),
       success: function (data) {
         // console.log(data);
+        // clear textarea after submit
+        $('.new-tweet textarea').val('');
         //remove previous tweets before load to solve duplication problem
         $('#tweets .tweet').remove();
         loadTweets();

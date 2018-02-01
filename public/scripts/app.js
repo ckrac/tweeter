@@ -6,10 +6,9 @@
 
 $( document ).ready(function() {
 
-
   const ROOT_URL = "http://localhost:8080/"
 
-  /* -------------- used to test createTweet Element function --------------- */
+  ////  used to test createTweet Element function
 
   // const tweetData = {
   //   "user": {
@@ -27,73 +26,71 @@ $( document ).ready(function() {
   //   "created_at": 1461116232227
   // }
 
-  /* -------------- used for renderTweets function --------------- */
+  ////// used for renderTweets function
 
-//   const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": {
-//         "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-//         "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-//         "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-//       },
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": {
-//         "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-//         "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-//         "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-//       },
-//       "handle": "@rd" },
-//     "content": {
-//       "text": "Je pense , donc je suis asdasdasd asdasdasdasdasd aasdasdasdasds"
-//     },
-//     "created_at": 1461113959088
-//   },
-//   {
-//     "user": {
-//       "name": "Johann von Goethe",
-//       "avatars": {
-//         "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-//         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-//         "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-//       },
-//       "handle": "@johann49"
-//     },
-//     "content": {
-//       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit. asdasdasdadfaasf bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbssssssssaaaaaa asdasdasdasd"
-//     },
-//     "created_at": 1461113796368
-//   }
-// ];
+  //   const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": {
+  //         "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
+  //         "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
+  //         "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
+  //       },
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1461116232227
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": {
+  //         "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
+  //         "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
+  //         "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+  //       },
+  //       "handle": "@rd" },
+  //     "content": {
+  //       "text": "Je pense , donc je suis asdasdasd asdasdasdasdasd aasdasdasdasds"
+  //     },
+  //     "created_at": 1461113959088
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Johann von Goethe",
+  //       "avatars": {
+  //         "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+  //         "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+  //         "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+  //       },
+  //       "handle": "@johann49"
+  //     },
+  //     "content": {
+  //       "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit. asdasdasdadfaasf bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbssssssssaaaaaa asdasdasdasd"
+  //     },
+  //     "created_at": 1461113796368
+  //   }
+  // ];
 
-  /* --------------  createTweeteElement test --------------- */
+  /////// createTweeteElement test
 
   // let $tweet = createTweetElement(tweetData);
   // console.log($tweet);
   // $('#tweets').append($tweet);
   // $('#tweets').append($tweet);
 
-  //
-  function escape(str) {
-    var div = document.createElement('div');
+
+  ///////// function to prevent cross-site scripting
+  const escape = (str) => {
+    let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
 
-
-  /* --------------  --------------- */
-
-  function createTweetElement (tweetObj) {
+  const createTweetElement = (tweetObj) => {
 
     let $tweet = $(`<div class="tweet">
 
@@ -121,9 +118,7 @@ $( document ).ready(function() {
     return $tweet;
   }
 
-  /* --------------  --------------- */
-
-  function renderTweets(tweets) {
+  const renderTweets = (tweets) => {
   // loops through tweets
     for (let tweet_ of tweets) {
       // calls createTweetElement for each tweet
@@ -133,9 +128,7 @@ $( document ).ready(function() {
     }
   }
 
-  /* --------------  --------------- */
-
-  // load all tweets via AJAX 'GET' request, then render them on page
+  ////// load all tweets via AJAX 'GET' request, then render them on page
   const loadTweets = () => {
     // make the AJAX call to load all the tweets from the API
     $.ajax({
@@ -148,16 +141,12 @@ $( document ).ready(function() {
         renderTweets(moreTweets);
       }
     });
-
   }
 
+  //////// load tweets to homepage
   loadTweets();
 
-
-
-  /* -------------- call Function to render index page --------------- */
-
-  // generate a new tweet from a form submission
+  //////// generate a new tweet from a form submission
   $('.new-tweet form').on('submit', function(e) {
     $.ajax({
       url: '/tweets',
@@ -170,13 +159,11 @@ $( document ).ready(function() {
         loadTweets();
       }
     });
-
-
     e.preventDefault();
   });
 
 
-  // check if tweet is valid, else show error
+  ///////// check if tweet is valid, else show error
   $('.new-tweet input').on('click', function(e) {
       let textLength = $(this).siblings('textarea').val().length;
       // console.log(textLength);
@@ -193,13 +180,12 @@ $( document ).ready(function() {
       }
   });
 
-  //slide new-tweet section up or down
+  ///////// slide new-tweet section up or down
   $('#nav-bar button').on('click', function(e) {
     console.log('clicked');
     $('.new-tweet').slideToggle();
     $('.new-tweet textarea').focus();
   });
-
 
 });
 

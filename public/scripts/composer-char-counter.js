@@ -13,16 +13,12 @@ $( document ).ready(function() {
         $(this).siblings('.counter').removeClass('valid');
         $(this).siblings('.counter').text(tweetCounter);
       }
-      // $(this).siblings('.counter').text(tweetCounter);
     });
-
+    // changes hover state of tweets
     $('#tweets').on('mouseenter', '.tweet', function(e) {
       $(this).addClass('tweet--hover');
-      //$(this).find('.tweet__icons').addClass('tweet__icons--hover');
     });
     $('#tweets').on('mouseleave', '.tweet', function(e) {
       $(this).removeClass('tweet--hover');
     });
-
-
 });

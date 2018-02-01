@@ -6,8 +6,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-![""]
-![""]
+!["Tweeter homepage"](https://github.com/ckrac/tweeter/blob/w3d4/Project-Evaluation/docs/tweeter-homepage.png?raw=true)
+!["Show character count limit exceeded"](https://github.com/ckrac/tweeter/blob/w3d4/Project-Evaluation/docs/tweeter-character-count.png?raw=true)
 
 ## Getting Started
 

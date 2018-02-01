@@ -15,12 +15,11 @@ app.use(express.static("public"));
 const {MongoClient} = require("mongodb");
 const MONGODB_URL = "mongodb://localhost:27017/tweeter";
 
-
 MongoClient.connect(MONGODB_URL, (err, db) => {
 
   if(err) {
-    console.error("Can't connect to Mongo!")
-    throw new Error("Can't connect to Mongo!")
+    console.error("Can't connect to Mongo!");
+    throw new Error("Can't connect to Mongo!");
   }
   // The `data-helpers` module provides an interface to the database of tweets.
   // This simple interface layer has a big benefit: we could switch out the
@@ -41,5 +40,5 @@ MongoClient.connect(MONGODB_URL, (err, db) => {
   app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);
   });
-})
+});
 

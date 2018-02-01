@@ -16,9 +16,9 @@ $( document ).ready(function() {
     });
     // changes hover state of tweets
     $('#tweets').on('mouseenter', '.tweet', function(e) {
-      $(this).addClass('tweet--hover');
+      $(this).addClass('tweet-hover');
     });
     $('#tweets').on('mouseleave', '.tweet', function(e) {
-      $(this).removeClass('tweet--hover');
+      $(this).removeClass('tweet-hover');
     });
 });

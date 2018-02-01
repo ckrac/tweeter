@@ -19,7 +19,7 @@ $( document ).ready(function() {
 
     let $tweet = $(`<div class="tweet">
 
-                      <header class="tweet__header">
+                      <header class="tweet-header">
                         <img src="${tweetObj.user.avatars.regular}">
                         <h2>${tweetObj.user.name}</h2>
                         <span>${tweetObj.user.handle}</span>
@@ -29,9 +29,9 @@ $( document ).ready(function() {
                         <p>${escape(tweetObj.content.text)}</p>
                       </article>
 
-                      <footer class="tweet__footer">
+                      <footer class="tweet-footer">
                         <p>${tweetObj.created_at} days ago</p>
-                        <div class="tweet__icons">
+                        <div class="tweet-icons">
                           <i class="fa fa-heart" aria-hidden="true"></i>
                           <i class="fa fa-retweet" aria-hidden="true"></i>
                           <i class="fa fa-flag" aria-hidden="true"></i>

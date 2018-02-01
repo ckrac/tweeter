@@ -1,0 +1,52 @@
+/*Nav Bar*/
+
+$turquoise: #00a087
+
+%backgroundWhite-borderBlack
+  background-color: white
+  border: 1px solid black
+
+
+
+.nav-bar
+  position: fixed
+  height: 80px
+  width: 100%
+  background-color: $turquoise
+  color: #e8fdff
+  padding: 0 2em
+  z-index: 2
+
+
+.nav-bar-logo
+  height: 80px
+  width: 80px
+  float: left
+  padding-right: 10px
+
+
+.nav-bar-header
+  float: left
+  font-size:  2em
+  line-height: 80px
+
+
+.nav-bar button
+  @extend %backgroundWhite-borderBlack
+  font-size: 1.2em
+  height: 60px
+  width: 120px
+  float: right
+  margin-top: 10px
+  margin-right: 180px
+  border-radius: 5px
+  color: $turquoise
+  opacity: 0.8
+
+
+.nav-bar button:hover
+  @extend %backgroundWhite-borderBlack
+  color: black
+  opacity: 1
+
+

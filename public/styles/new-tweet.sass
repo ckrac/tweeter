@@ -1,0 +1,140 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+
+
+.new-tweet
+  background-color: #eee
+  border: 1px solid silver
+  border-radius: 5px
+  margin-right: 2em
+  padding: 0 10px
+
+
+.new-tweet h2
+  border-bottom: 1px solid black
+  margin-top: 10px
+
+
+.new-tweet textarea
+  display: block
+  width: 100%
+  margin-bottom: 5px
+
+
+.new-tweet form
+  padding-bottom: 10px
+
+
+%tweetcounter
+  font-size: 0.75em
+  font-weight: 500
+  font-style: italic
+  float: right
+  margin-top: 4px
+  padding-right: 8px
+
+.new-tweet .counter
+  @extend %tweetcounter
+  color: black
+
+
+.new-tweet .valid
+  @extend %tweetcounter
+  color: red
+
+
+/* ----------------- user tweets -----------------*/
+
+#tweets
+  margin-top: 10px
+  background-color: white
+  margin-right: 2em
+
+
+/* ------------- tweet ---------------*/
+
+%tweet-toggle-state
+  margin-top: 10px
+  background-color: white
+  border: 1px solid silver
+  border-radius: 5px
+
+.tweet
+  @extend %tweet-toggle-state
+  opacity: 0.75
+  transition: border-color .5s linear
+
+
+.hover
+  @extend %tweet-toggle-state
+  height: 195px
+  opacity: 1
+
+/* ------- Header ------- */
+
+.tweet-header
+  height: 70px
+  background-color: #eee
+  clear: both
+
+.tweet header h2
+  display: inline
+  float: left
+  margin-top: 8px
+
+.tweet header img
+  width: 50px
+  height: 50px
+  border-radius: 4px
+  float: left
+  margin: 8px 10px
+  clear: both
+
+.tweet header span
+  float: right
+  margin-right: 10px
+  margin-top: 8px
+
+/* ------- Article -------- */
+
+.tweet article
+  border-bottom: 1px solid #eee
+
+.tweet article p
+  margin-top: 30px
+  margin-bottom: 30px
+  margin-left: 5px
+
+/* ---------- Footer ---------- */
+
+.tweet footer
+  height: 20px
+
+.tweet footer p
+  font-size: .75em
+  margin-top: 15px
+  margin-left: 5px
+
+.tweet-footer
+  position: relative
+
+.tweet-icons
+  position: absolute
+  top: -8px
+  right: 10px
+  opacity: 0
+  transition:  opacity .5s linear
+
+.tweet-hover
+  border-color: black
+  border-width: 2px
+
+.tweet-hover .tweet-icons
+  opacity: 1
+
+
+
+
+
+

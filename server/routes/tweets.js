@@ -17,6 +17,12 @@ module.exports = function(DataHelpers) {
     });
   });
 
+
+  // use jquery to pass the id and increment like for object
+  // tweetsRoutes.get("/like", function(req, res) {
+
+  // })
+
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
